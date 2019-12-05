@@ -17,49 +17,41 @@ span {
 	margin-top : 10%;
 	font : italic bolder 100px consolas, sans-serif;
 }
-  a {
+a {
  	text-decoration:none;
 	color:#000000
-  }
-
-  form {
-	margin: 0 auto; width:900px; 
-
-
 }
- div { text-align : center; }
 
+form {
+	margin: 0 auto; width:900px; 
+}
 
-  html,body,{
-                    margin: 0;
-                    padding: 0;
-			text-align : center;
-             }
+div { text-align : center; }
 
-             header{
-			padding-top : 7%;
-                    border: 0px solid #000000;
-                    -moz-box-sizing: border-box; /* Firefox  */
-                    -webkit-box-sizing: border-box; /* Safari */
-                    box-sizing: border-box; /* CSS3 Standard */
-	       text-align : center;
+html,body,{
+        margin: 0;
+        padding: 0;
+	text-align : center;
+}
+
+header{
+		padding-top : 7%;
+                border: 0px solid #000000;
+               	-moz-box-sizing: border-box; /* Firefox  */
+                -webkit-box-sizing: border-box; /* Safari */
+                box-sizing: border-box; /* CSS3 Standard */
+	        text-align : center;
 		background-size : 100% 600px;
               	height : 50%;
 		background-image : url(https://cdn.pixabay.com/photo/2013/02/21/19/10/sea-84629_1280.jpg);
-             } 
+} 
 </style>
 </head>
 <body>
     <header>
         <div >
-            <div>
-                <div>
-                    <div>
-                        <span>Youngchan's Blog</span>
-                        <h1>Cloud Computing 적용사례(Option 5)</h1>
-                    </div>
-                </div>
-            </div>
+              <span>Youngchan's Blog</span
+	      <h1>Cloud Computing 적용사례(Option 5)</h1>           
         </div>
     </header>
 <?php
@@ -154,37 +146,5 @@ function AddEmployee($connection, $name, $address) {
    if(!mysqli_query($connection, $query)) echo("<p>Error adding employee data.</p>");
 }
 
-/* Check whether the table exists and, if not, create it. */
-/*
-function VerifyEmployeesTable($connection, $dbName) {
-  if(!TableExists("Employees", $connection, $dbName))
-  {
-     $query = "CREATE TABLE `Employees` (
-         `ID` int(11) NOT NULL AUTO_INCREMENT,
-         `Name` varchar(45) DEFAULT NULL,
-         `Address` varchar(90) DEFAULT NULL,
-         PRIMARY KEY (`ID`),
-         UNIQUE KEY `ID_UNIQUE` (`ID`)
-       ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1";
-
-     if(!mysqli_query($connection, $query)) echo("<p>Error creating table.</p>");
-  }
-}
-*/
-
-/* Check for the existence of a table. */
-/*
-function TableExists($tableName, $connection, $dbName) {
-  $t = mysqli_real_escape_string($connection, $tableName);
-  $d = mysqli_real_escape_string($connection, $dbName);
-
-  $checktable = mysqli_query($connection,
-      "SELECT TABLE_NAME FROM information_schema.TABLES WHERE TABLE_NAME = '$t' AND TABLE_SCHEMA = '$d'");
-
-  if(mysqli_num_rows($checktable) > 0) return true;
-
-  return false;
-}
-*/
 ?>
 
